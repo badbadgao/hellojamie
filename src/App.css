@@ -7,19 +7,46 @@
   height: 40px;
 }
 
-.App-title-align {
+.App-right-banner-container {
+  width: 60%;
+  text-align: right;
   display: inline-block;
-  font-size: 20px;
+  padding-right: 20px;
+}
+
+.App-right-banner-container text {
   color: #fff;
-  vertical-align:middle;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.App-banner-right-align {
+  display: inline-block;
+  color: #fff;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.App-left-banner-container {
+  width: 30%;
+  text-align: left;
+  display: inline-block;
+}
+
+.App-banner-left-align {
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  vertical-align: middle;
 }
 
 .App-header {
   background-color: #789;
   height: 48px;
   width: 100%;
-  /*padding: 10px;*/
-  color: white;
   text-align: left;
 }
 
@@ -28,6 +55,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
