@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import LinkText from './LinkText.jsx';
 
 export default class Banner extends React.Component {
   constructor(props) {
@@ -23,11 +24,9 @@ export default class Banner extends React.Component {
           <h1 className="App-banner-left-align">Hello Jamie</h1>
         </div>
         <div className="App-right-banner-container">
-          <text onClick={this.handleClick}>HELP</text>
-          <text className="App-banner-right-align">&ensp;|&ensp;</text>
-          <text href="www.google.co.nz"> SINGIN</text>
-          <text className="App-banner-right-align">&ensp;|&ensp;</text>
-          <text href="www.google.co.nz"> SINGUP</text>
+          <LinkText onClick={this.handleClick} content="HELP" />
+          <LinkText onClick={this.handleClick} content="SINGIN" />
+          <LinkText onClick={this.handleClick} content="SINGUP" />
         </div>
       </div>
     );
