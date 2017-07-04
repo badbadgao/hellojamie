@@ -7,27 +7,11 @@
   height: 40px;
 }
 
-.App-right-banner-container {
-  width: 60%;
-  text-align: right;
-  display: inline-block;
-  padding-right: 20px;
-}
-
-.App-right-banner-container text {
-  color: #fff;
-  font-size: 15px;
-  display: inline-block;
-  vertical-align: middle;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.App-banner-right-align {
-  display: inline-block;
-  color: #fff;
-  font-size: 15px;
-  vertical-align: middle;
+.App-header {
+  background-color: #789;
+  height: 48px;
+  width: 100%;
+  text-align: left;
 }
 
 .App-left-banner-container {
@@ -43,11 +27,24 @@
   vertical-align: middle;
 }
 
-.App-header {
-  background-color: #789;
-  height: 48px;
-  width: 100%;
+.App-right-banner-container {
+  width: 60%;
+  text-align: right;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.LinkTextContainer {
+  display: inline-block;
+}
+
+.LinkTextContainer text {
+  color: #fff;
+  font-size: 15px;
+  vertical-align: middle;
   text-align: left;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .App-intro {

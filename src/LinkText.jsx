@@ -8,11 +8,11 @@ export default class LinkText extends React.Component {
 
   render() {
     return (
-      <div>
-        <text onClick={this.props.onClick} className="App-banner-right-align">
+      <div className="LinkTextContainer">
+        <text onClick={this.props.onClick}>
           {this.props.content}
         </text>
-        <text className="App-banner-right-align">&ensp;|&ensp;</text>
+        <text>&ensp;|&ensp;</text>
       </div>
     );
   }
