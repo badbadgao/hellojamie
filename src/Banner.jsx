@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import LinkText from './LinkText.jsx';
+import TitleWithLogo from './TitleWithLogo.jsx';
 
 export default class Banner extends React.Component {
   constructor(props) {
@@ -16,12 +17,7 @@ export default class Banner extends React.Component {
     return (
       <div className="App-header">
         <div className="App-left-banner-container">
-          <img
-            src={logo}
-            className="App-logo App-banner-left-align"
-            alt="logo"
-          />
-          <h1 className="App-banner-left-align">Hello Jamie</h1>
+          <TitleWithLogo logo={logo} title="Hello Jamie" />
         </div>
         <div className="App-right-banner-container">
           <LinkText onClick={this.handleClick} content="HELP" />
