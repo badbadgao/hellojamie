@@ -14,12 +14,33 @@ export default class Banner extends React.Component {
   }
 
   render() {
+    const styles = {
+      bannerContainer: {
+        backgroundColor: `#789`,
+        height: `48px`,
+        width: `100%`,
+        textAlign: `left`
+      },
+      logoContainer: {
+        display: `inline-block`,
+        textAlign: `left`,
+        width: `30%`,
+        marginLeft: `100px`
+      },
+      signContainer: {
+        position: `absolute`,
+        top: 0,
+        right: `20px`,
+        lineHeight: `48px`,
+        display: `inline-block`
+      }
+    };
     return (
-      <div className="App-header">
-        <div className="App-left-banner-container">
+      <div style={styles.bannerContainer}>
+        <div style={styles.logoContainer}>
           <TitleWithLogo logo={logo} title="Hello Jamie" />
         </div>
-        <div className="App-right-banner-container">
+        <div style={styles.signContainer}>
           <LinkText onClick={this.handleClick} content="HELP" />
           <LinkText onClick={this.handleClick} content="SINGIN" />
           <LinkText onClick={this.handleClick} content="SINGUP" />
