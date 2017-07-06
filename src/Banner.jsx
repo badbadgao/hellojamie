@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import LinkText from './LinkText.jsx';
 import TitleWithLogo from './TitleWithLogo.jsx';
+import locationIcon from './resource/location.png';
+import LocationBox from './LocationBox.jsx';
 
 export default class Banner extends React.Component {
   constructor(props) {
@@ -44,12 +46,18 @@ export default class Banner extends React.Component {
       flexSignContainer: {
         display: `flex`,
         alignItems: `center`
+      },
+      locationBox: {
+        display: `inline-block`
       }
     };
     return (
       <div style={styles.bannerContainer}>
         <div style={styles.logoContainer}>
           <TitleWithLogo logo={logo} title="Hello Jamie" />
+        </div>
+        <div style={styles.locationBox}>
+          <LocationBox logo={locationIcon} />
         </div>
         <div style={styles.signContainer}>
           <LinkText onClick={this.handleClick} content="HELP" />
