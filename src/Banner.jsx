@@ -25,7 +25,7 @@ export default class Banner extends React.Component {
         display: `inline-block`,
         textAlign: `left`,
         width: `30%`,
-        marginLeft: `100px`
+        marginLeft: `30px`
       },
       signContainer: {
         position: `absolute`,
@@ -33,6 +33,17 @@ export default class Banner extends React.Component {
         right: `20px`,
         lineHeight: `48px`,
         display: `inline-block`
+      },
+      flexBannerContainer: {
+        display: `flex`,
+        justifyContent: `flex-start`,
+        backgroundColor: `#789`,
+        height: `48px`,
+        width: `100%`
+      },
+      flexSignContainer: {
+        display: `flex`,
+        alignItems: `center`
       }
     };
     return (
