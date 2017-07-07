@@ -6,14 +6,33 @@ export default class LocationBox extends React.Component {
   }
 
   render() {
-    const style = {
-      width: `24px`,
-      height: `24px`,
-      verticalAlign: `middle`
+    const styles = {
+      locationContainer: {
+        lineHeight: `24px`,
+        backgroundColor: `#fff`,
+        borderRadius: `2px`
+      },
+      locationIcon: {
+        display: `inline-block`,
+        width: `20px`,
+        height: `20px`,
+        verticalAlign: `middle`,
+        marginLeft: `3px`
+      },
+      locationInput: {
+        display: `inline-block`,
+        border: `none`,
+        outline: `none`,
+        hint: `Enter your location`,
+        verticalAlign: `middle`,
+        marginRight: `10px`,
+        paddingLeft: `3px`
+      }
     };
     return (
-      <div>
-        <img src={this.props.logo} style={style} />
+      <div style={styles.locationContainer}>
+        <img src={this.props.logo} style={styles.locationIcon} />
+        <input style={styles.locationInput} type="search" />
       </div>
     );
   }
