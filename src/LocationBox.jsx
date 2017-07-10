@@ -31,8 +31,9 @@ export default class LocationBox extends React.Component {
     };
     return (
       <div style={styles.locationContainer}>
-        <img src={this.props.logo} style={styles.locationIcon} />
-        <input style={styles.locationInput} type="search" />
+        <img src={this.props.locationIconGrey} style={styles.locationIcon} />
+        <input value="Auckland" style={styles.locationInput} type="search" />
+        <img src={this.props.chevronDownIcon} style={styles.locationIcon} />
       </div>
     );
   }

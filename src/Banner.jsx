@@ -2,8 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import LinkText from './LinkText.jsx';
 import TitleWithLogo from './TitleWithLogo.jsx';
-import locationIconGrey from './resource/location_grey.png';
-import locationIconBlack from './resource/location_black.png';
+import locationIconGrey from './resource/location-grey.png';
+import locationIconBlack from './resource/location-black.png';
+import chevronDownIcon from './resource/chevron-down.png';
 
 import LocationBox from './LocationBox.jsx';
 
@@ -59,7 +60,10 @@ export default class Banner extends React.Component {
           <TitleWithLogo logo={logo} title="Hello Jamie" />
         </div>
         <div style={styles.locationBox}>
-          <LocationBox logo={locationIconGrey} />
+          <LocationBox
+            locationLogo={locationIconGrey}
+            menuDownLogo={chevronDownIcon}
+          />
         </div>
         <div style={styles.signContainer}>
           <LinkText onClick={this.handleClick} content="HELP" />
