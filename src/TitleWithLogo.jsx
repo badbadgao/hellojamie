@@ -7,12 +7,29 @@ export default class TitleWithLogo extends React.Component {
   }
 
   render() {
+    const styles = {
+      container: {
+        display: `inline-block`,
+        paddingLeft: `20px`
+      },
+      img: {
+        verticalAlign: `middle`,
+        display: `inline-block`,
+        textAlign: `left`
+      },
+      text: {
+        color: `#fff`,
+        fontSize: `15px`,
+        display: `inline-block`,
+        verticalAlign: `middle`,
+        paddingRight: `30px`
+      }
+    };
     return (
-      <div className="Title-with-logo">
-        <img src={this.props.logo} className="App-logo" alt="logo" />
-        <h1>
+      <div style={styles.container}>
+        <p style={styles.text}>
           {this.props.title}
-        </h1>
+        </p>
       </div>
     );
   }
