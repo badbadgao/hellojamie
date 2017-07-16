@@ -51,7 +51,15 @@ export default class Banner extends React.Component {
           <TitleWithLogo titleLogo={logo} title="Hello Jamie" />
         </div>
         <div style={styles.locationBox}>
-          <LocationBox location="Auckland" />
+          <LocationBox
+            locationLogo={locationIconGrey}
+            menuDownLogo={chevronDownIcon}
+          />
+        </div>
+        <div style={styles.signContainer}>
+          <LinkText onClick={this.handleClick} content="HELP" />
+          <LinkText onClick={this.handleClick} content="SINGIN" />
+          <LinkText onClick={this.handleClick} content="SINGUP" />
         </div>
         <BannerRightPanel />
       </div>
