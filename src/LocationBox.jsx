@@ -1,22 +1,38 @@
 import React from 'react';
 import chevronDownIcon from './resource/chevron-down.png';
 import locationGreyIcon from './resource/location-grey.png';
+import LocationDropDownMenu from './LocationDropDownMenu.jsx';
 
 export default class LocationBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       locationContainerBgColor: ``,
-      dropdownContainerDisplay: false
+      dropdownContainerDisplay: false,
+      location: `Auckland`,
+      allLocations: [
+        `Auckland`,
+        `Wellington`,
+        `Christhurch`,
+        `Hamilton`,
+        `Tauranga`,
+        `Napier-Hastings`,
+        `Dunedin`,
+        `Rotorua`
+      ]
     };
     this.mouseOverHandler = this.mouseOverHandler.bind(this);
     this.mouseOutHandler = this.mouseOutHandler.bind(this);
-    this.dropDownItemMouseOverHandler = this.dropDownItemMouseOverHandler.bind(
+    this.onDropDownItemClickHandler = this.onDropDownItemClickHandler.bind(
       this
     );
-    this.dropDownItemMouseOutHandler = this.dropDownItemMouseOutHandler.bind(
-      this
-    );
+  }
+
+  onDropDownItemClickHandler(location) {
+    this.setState({
+      location,
+      dropdownContainerDisplay: false
+    });
   }
 
   mouseOverHandler() {
@@ -30,18 +46,6 @@ export default class LocationBox extends React.Component {
     this.setState({
       locationContainerBgColor: ``,
       dropdownContainerDisplay: false
-    });
-  }
-
-  dropDownItemMouseOverHandler() {
-    this.setState({
-      dropDownItemBgColor: `#789`
-    });
-  }
-
-  dropDownItemMouseOutHandler() {
-    this.setState({
-      dropDownItemBgColor: `#89a`
     });
   }
 
@@ -72,13 +76,6 @@ export default class LocationBox extends React.Component {
         verticalAlign: `middle`
       },
       dropdownContainer: {
-        paddingLeft: `10px`,
-        width: `150px`,
-        backgroundColor: `#89a`,
-        position: `absolute`,
-        fontSize: `13px`,
-        color: `#fff`,
-        cursor: `pointer`,
         display: this.state.dropdownContainerDisplay ? 'block' : 'none'
       },
       dropDownItem: {
@@ -93,32 +90,15 @@ export default class LocationBox extends React.Component {
         <div style={styles.locationContainer}>
           <img src={locationGreyIcon} style={styles.locationIcon} />
           <p style={styles.location}>
-            {this.props.location}
+            {this.state.location}
           </p>
           <img src={chevronDownIcon} style={styles.locationSelectionIcon} />
         </div>
         <div style={styles.dropdownContainer}>
-          <p
-            style={styles.dropDownItem}
-            onMouseOut={this.dropDownItemMouseOutHandler}
-            onMouseOver={this.dropDownItemMouseOverHandler}
-          >
-            Weillington
-          </p>
-          <p
-            style={styles.dropDownItem}
-            onMouseOut={this.dropDownItemMouseOutHandler}
-            onMouseOver={this.dropDownItemMouseOverHandler}
-          >
-            Manukau
-          </p>
-          <p
-            style={styles.dropDownItem}
-            onMouseOut={this.dropDownItemMouseOutHandler}
-            onMouseOver={this.dropDownItemMouseOverHandler}
-          >
-            Botany
-          </p>
+          <LocationDropDownMenu
+            items={this.state.allLocations}
+            onItemClick={this.onDropDownItemClickHandler}
+          />
         </div>
       </div>
     );
