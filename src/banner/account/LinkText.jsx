@@ -33,7 +33,7 @@ export default class LinkText extends React.Component {
         margin: `0 4px`,
         cursor: `pointer`,
         verticalAlign: `middle`,
-        fontSize: `13px`,
+        fontSize: `12px`,
         color: this.state.textColor
       },
       divide: {

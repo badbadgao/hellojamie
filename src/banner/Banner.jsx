@@ -4,6 +4,7 @@ import profileIcon from '../resource/account-circle.png';
 import TitleWithLogo from './TitleWithLogo.jsx';
 import AccountPanel from './account/AccountPanel.jsx';
 import LocationBox from './location/LocationBox.jsx';
+import MyVocherPanel from './myvocher/MyVocherPanel.jsx';
 
 export default class Banner extends React.Component {
   constructor(props) {
@@ -47,6 +48,7 @@ export default class Banner extends React.Component {
           <TitleWithLogo titleLogo={logo} title="Hello Jamie" />
         </div>
         <LocationBox location="Auckland" />
+        <MyVocherPanel />
         <AccountPanel />
       </div>
     );

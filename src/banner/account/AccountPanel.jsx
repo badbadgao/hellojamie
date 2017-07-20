@@ -13,12 +13,12 @@ const AccountPanel = props => {
     container: {
       position: `absolute`,
       top: 0,
-      right: `20px`,
+      right: `50px`,
       lineHeight: `36px`,
       display: `inline-block`
     }
   };
-  const itemList = [`SINGIN`, `SINGUP`, `CONTACT`, `HELP`];
+  const itemList = [`SINGIN`, `SINGUP`, `CONTACT`];
   const linkText = itemList.map(item => {
     const mouseOverHandler = onMouseOverHandler.bind(this, item);
     const textClickHandler = onTextClick.bind(this, item);

@@ -30,7 +30,7 @@ export default class LocationDropDownMenuItem extends React.Component {
         backgroundColor: this.state.selectedColor
       },
       itemContent: {
-        fontSize: `13px`,
+        fontSize: `12px`,
         color: `#444`,
         paddingLeft: `10px`,
         lineHeight: `25px`,
