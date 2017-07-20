@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import profileIcon from './resource/account-circle.png';
-import LinkText from './LinkText.jsx';
+import logo from '../resource/logo.svg';
+import profileIcon from '../resource/account-circle.png';
 import TitleWithLogo from './TitleWithLogo.jsx';
-import BannerRightPanel from './BannerRightPanel.jsx';
-import LocationBox from './LocationBox.jsx';
+import AccountPanel from './account/AccountPanel.jsx';
+import LocationBox from './location/LocationBox.jsx';
 
 export default class Banner extends React.Component {
   constructor(props) {
@@ -19,10 +18,11 @@ export default class Banner extends React.Component {
   render() {
     const styles = {
       bannerContainer: {
-        backgroundColor: `#789`,
-        height: `48px`,
+        backgroundColor: `#f5f5f5`,
+        height: `36px`,
         width: `100%`,
-        textAlign: `left`
+        textAlign: `left`,
+        borderBottom: `1px solid #ddd`
       },
       logoContainer: {
         display: `inline-block`,
@@ -33,15 +33,12 @@ export default class Banner extends React.Component {
         display: `flex`,
         justifyContent: `flex-start`,
         backgroundColor: `#789`,
-        height: `48px`,
+        height: `36px`,
         width: `100%`
       },
       flexSignContainer: {
         display: `flex`,
         alignItems: `center`
-      },
-      locationBox: {
-        display: `inline-block`
       }
     };
     return (
@@ -49,15 +46,8 @@ export default class Banner extends React.Component {
         <div style={styles.logoContainer}>
           <TitleWithLogo titleLogo={logo} title="Hello Jamie" />
         </div>
-        <div style={styles.locationBox}>
-          <LocationBox location="Auckland" />
-        </div>
-        <div style={styles.signContainer}>
-          <LinkText onClick={this.handleClick} content="HELP" />
-          <LinkText onClick={this.handleClick} content="SINGIN" />
-          <LinkText onClick={this.handleClick} content="SINGUP" />
-        </div>
-        <BannerRightPanel />
+        <LocationBox location="Auckland" />
+        <AccountPanel />
       </div>
     );
   }

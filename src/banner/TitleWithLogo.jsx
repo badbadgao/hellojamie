@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../css/App.css';
 
 export default class TitleWithLogo extends React.Component {
   constructor(props) {
@@ -27,9 +27,9 @@ export default class TitleWithLogo extends React.Component {
     };
     return (
       <div style={styles.container}>
-        <p style={styles.text}>
+        <div style={styles.text}>
           {this.props.title}
-        </p>
+        </div>
       </div>
     );
   }

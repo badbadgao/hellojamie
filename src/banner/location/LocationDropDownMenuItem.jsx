@@ -12,13 +12,13 @@ export default class LocationDropDownMenuItem extends React.Component {
 
   itemMouseOverHandler() {
     this.setState({
-      selectedColor: `#89a`
+      selectedColor: `#ffffff`
     });
   }
 
   itemMouseOutHandler() {
     this.setState({
-      selectedColor: `#789`
+      selectedColor: `#f5f5f5`
     });
   }
 
@@ -31,7 +31,7 @@ export default class LocationDropDownMenuItem extends React.Component {
       },
       itemContent: {
         fontSize: `13px`,
-        color: `#fff`,
+        color: `#444`,
         paddingLeft: `10px`,
         lineHeight: `25px`,
         verticalAlign: `middle`

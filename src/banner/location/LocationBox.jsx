@@ -1,6 +1,6 @@
 import React from 'react';
-import chevronDownIcon from './resource/chevron-down.png';
-import locationGreyIcon from './resource/location-grey.png';
+import chevronDownIcon from '../../resource/chevron-down.png';
+import locationGreyIcon from '../../resource/location-grey.png';
 import LocationDropDownMenu from './LocationDropDownMenu.jsx';
 
 export default class LocationBox extends React.Component {
@@ -9,6 +9,8 @@ export default class LocationBox extends React.Component {
     this.state = {
       locationContainerBgColor: ``,
       dropdownContainerDisplay: false,
+      leftBorder: `none`,
+      rightBorder: `none`,
       location: `Auckland`,
       allLocations: [
         `Auckland`,
@@ -30,30 +32,45 @@ export default class LocationBox extends React.Component {
 
   onDropDownItemClickHandler(location) {
     this.setState({
-      location,
-      dropdownContainerDisplay: false
+      location: location,
+      locationContainerBgColor: ``,
+      dropdownContainerDisplay: false,
+      leftBorder: `none`,
+      rightBorder: `none`,
+      curretLocationColor: `#444`
     });
   }
 
   mouseOverHandler() {
     this.setState({
-      locationContainerBgColor: `#89a`,
-      dropdownContainerDisplay: true
+      locationContainerBgColor: `#ffffff`,
+      dropdownContainerDisplay: true,
+      leftBorder: `1px solid #ddd`,
+      rightBorder: `1px solid #ddd`,
+      curretLocationColor: `#e08a1e`
     });
   }
 
   mouseOutHandler() {
     this.setState({
       locationContainerBgColor: ``,
-      dropdownContainerDisplay: false
+      dropdownContainerDisplay: false,
+      leftBorder: `none`,
+      rightBorder: `none`,
+      curretLocationColor: `#444`
     });
   }
 
   render() {
     const styles = {
-      locationContainer: {
-        lineHeight: `20px`,
-        backgroundColor: this.state.locationContainerBgColor
+      container: {
+        display: `inline-block`
+      },
+      currentLocationContainer: {
+        lineHeight: `36px`,
+        backgroundColor: this.state.locationContainerBgColor,
+        borderLeft: this.state.leftBorder,
+        borderRight: this.state.rightBorder
       },
       locationIcon: {
         display: `inline-block`,
@@ -67,7 +84,7 @@ export default class LocationBox extends React.Component {
         verticalAlign: `middle`,
         marginRight: `3px`,
         paddingLeft: `3px`,
-        color: `#fff`,
+        color: this.state.curretLocationColor,
         fontSize: `13px`
       },
       locationSelectionIcon: {
@@ -86,12 +103,13 @@ export default class LocationBox extends React.Component {
       <div
         onMouseOver={this.mouseOverHandler}
         onMouseOut={this.mouseOutHandler}
+        style={styles.container}
       >
-        <div style={styles.locationContainer}>
+        <div style={styles.currentLocationContainer}>
           <img src={locationGreyIcon} style={styles.locationIcon} />
-          <p style={styles.location}>
+          <div style={styles.location}>
             {this.state.location}
-          </p>
+          </div>
           <img src={chevronDownIcon} style={styles.locationSelectionIcon} />
         </div>
         <div style={styles.dropdownContainer}>

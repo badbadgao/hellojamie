@@ -7,18 +7,22 @@ const LocationDropDownMenu = props => {
   const content = props.items.map(item => {
     const boundItemClick = props.onItemClick.bind(this, item);
     return (
-      <LocationDropDownMenuItem content={item} onItemClick={boundItemClick} />
+      <LocationDropDownMenuItem
+        key={item.toString()}
+        content={item}
+        onItemClick={boundItemClick}
+      />
     );
   });
   const style = {
     paddingTop: `4px`,
-    paddingBottom: `4px`,
     width: `200px`,
     height: `150px`,
-    backgroundColor: `#89a`,
+    backgroundColor: `#ffffff`,
+    borderBottom: `1px solid #ddd`,
+    borderLeft: `1px solid #ddd`,
     position: `absolute`,
-    overflowY: `scroll`,
-    scrollWidth: `3px`
+    overflowY: `scroll`
   };
 
   return (
