@@ -8,10 +8,10 @@ export default class SearchBox extends React.Component {
     this.onInputHandler = this.onInputHandler.bind(this);
     this.state = {
       seachBoxBorder: '2px solid #e08a1e',
-      relatedProductList: {
-        product: { name: 'iphone5s', amount: '10000' },
-        product: { name: 'iphone6s', amount: '10000' }
-      }
+      relatedProductList: [
+        { name: 'iphone5s', amount: '10000' },
+        { name: 'iphone6s', amount: '10000' }
+      ]
     };
   }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SearchDropDownItem from './SearchDropDownItem.jsx';
 
 const SearchDropDownMenu = props => {
@@ -6,7 +7,11 @@ const SearchDropDownMenu = props => {
     return <SearchDropDownItem product={product} />;
   });
 
-  return <div>dropDownPanel</div>;
+  return (
+    <div>
+      {dropDownPanel}
+    </div>
+  );
 };
 
 export default SearchDropDownMenu;
