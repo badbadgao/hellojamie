@@ -1,42 +1,62 @@
 import React from 'react';
 
-const SearchDropDownItem = props => ({
+export default class SearchDropDownItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      containerBgColor: '#fff'
+    };
+    this.onMouseOverHandler = this.onMouseOverHandler.bind(this);
+    this.onMouseOutHandler = this.onMouseOutHandler.bind(this);
+  }
+
+  onMouseOverHandler() {
+    this.setState({ containerBgColor: '#f5f5f5' });
+  }
+
+  onMouseOutHandler() {
+    this.setState({ containerBgColor: '#fff' });
+  }
+
   render() {
     const styles = {
       container: {
-        height: '20px',
-        padding: '4px',
-        width: '448px',
-        backgroundColor: '#3f8',
-        display: 'inline-block'
+        height: '25px',
+        width: '100%',
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        backgroundColor: this.state.containerBgColor,
+        cursor: 'pointer'
       },
       product: {
         color: '#444',
+        lineHeight: '25px',
+        width: '75%',
         fontSize: '13px',
         display: 'inline-block',
-        verticalAlign: 'middle'
+        paddingLeft: '4px'
       },
       resultAmount: {
-        position: 'absolute',
-        right: '10px',
-        color: '#444',
-        fontSize: '13px',
-        display: 'inline-block',
-        verticalAlign: 'middle',
+        lineHeight: '25px',
+        color: '#999',
+        fontSize: '11px',
         display: 'inline-block'
       }
     };
     return (
-      <div style={styles.container}>
+      <div
+        style={styles.container}
+        onMouseOver={this.onMouseOverHandler}
+        onMouseOut={this.onMouseOutHandler}
+        onCliek={this.props.onItemClick}
+      >
         <div style={styles.product}>
-          {props.product.name}
+          {this.props.product.name}
         </div>
         <div style={styles.resultAmount}>
-          Reuslt {props.product.amount}
+          Result {this.props.product.amount}
         </div>
       </div>
     );
   }
-});
-
-export default SearchDropDownItem;
+}

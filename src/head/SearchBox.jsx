@@ -10,8 +10,11 @@ export default class SearchBox extends React.Component {
       relatedProductList: [
         { name: 'iphone5s', amount: '10000' },
         { name: 'iphone6s', amount: '10000' }
-      ]
+      ],
+      inputValue: ''
     };
+
+    this.onItemClick = this.onItemClick.bind(this);
   }
 
   onInputHandler(event) {
@@ -20,6 +23,12 @@ export default class SearchBox extends React.Component {
     } else {
       this.setState({ dropDownDisplayed: false });
     }
+  }
+
+  onItemClick(product) {
+    this.setState({
+      inputValue: product.name
+    });
   }
 
   render() {
@@ -49,16 +58,6 @@ export default class SearchBox extends React.Component {
         cursor: `pointer`,
         color: '#fff',
         fontSize: '15px'
-      },
-      searchDropDownMenu: {
-        width: '348px',
-        textAlign: 'start',
-        borderLeft: '1px solid #ddd',
-        borderRight: '1px solid #ddd',
-        borderBottom: '1px solid #ddd',
-        fontSize: '13px',
-        color: '#444',
-        display: this.state.dropDownDisplayed ? 'block' : 'none'
       }
     };
     return (
@@ -70,14 +69,15 @@ export default class SearchBox extends React.Component {
             placeholder="UGG Milk"
             onFocus={this.onFocusHandler}
             onInput={this.onInputHandler}
+            value={this.state.inputValue}
           />
           <div style={styles.searchButton}>Search</div>
         </div>
-        <div style={styles.searchDropDownMenu}>
-          <SearchDropDownMenu
-            relatedProductList={this.state.relatedProductList}
-          />
-        </div>
+        <SearchDropDownMenu
+          onItemClick={this.onItemClick}
+          dropDownDisplayed={this.state.dropDownDisplayed}
+          relatedProductList={this.state.relatedProductList}
+        />
       </div>
     );
   }

@@ -26,8 +26,7 @@ export default class LinkText extends React.Component {
     const styles = {
       container: {
         textAlign: `left`,
-        display: `inline-block`,
-        verticalAlign: `middle`
+        display: `inline-block`
       },
       content: {
         margin: `0 4px`,
