@@ -9,7 +9,10 @@ export default class SearchBox extends React.Component {
       dropDownDisplayed: false,
       relatedProductList: [
         { name: 'iphone5s', amount: '10000' },
-        { name: 'iphone6s', amount: '10000' }
+        { name: 'iphone6s', amount: '10000' },
+        { name: 'iphone4s', amount: '10000' },
+        { name: 'iphone7s', amount: '10000' },
+        { name: 'iphone8s', amount: '10000' }
       ],
       inputValue: ''
     };
