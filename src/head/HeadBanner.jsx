@@ -1,4 +1,5 @@
 import React from 'react';
+import MuiSearchBox from './MuiSearchBox.jsx';
 import SearchBox from './SearchBox.jsx';
 
 const HeadBanner = props => {
@@ -11,7 +12,7 @@ const HeadBanner = props => {
   };
   return (
     <div style={styles.container}>
-      <SearchBox />
+      <MuiSearchBox />
     </div>
   );
 };

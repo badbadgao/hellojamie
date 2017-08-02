@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from 'material-ui/Card';
 
 export default class SearchDropDownItem extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ export default class SearchDropDownItem extends React.Component {
         style={styles.container}
         onMouseOver={this.onMouseOverHandler}
         onMouseOut={this.onMouseOutHandler}
-        onCliek={this.props.onItemClick}
+        onClick={this.props.onItemClick}
       >
         <div style={styles.product}>
           {this.props.product.name}

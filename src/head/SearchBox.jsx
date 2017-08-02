@@ -18,6 +18,7 @@ export default class SearchBox extends React.Component {
   }
 
   onInputHandler(event) {
+    this.setState({ inputValue: event.target.value });
     if (event.target.value.indexOf('iphone') > -1) {
       this.setState({ dropDownDisplayed: true });
     } else {
@@ -27,7 +28,8 @@ export default class SearchBox extends React.Component {
 
   onItemClick(product) {
     this.setState({
-      inputValue: product.name
+      inputValue: product.name,
+      dropDownDisplayed: false
     });
   }
 
