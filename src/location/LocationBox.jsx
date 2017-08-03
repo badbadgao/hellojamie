@@ -7,18 +7,18 @@ export default class LocationBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      locationContainerBgColor: ``,
+      locationContainerBgColor: '',
       dropdownContainerDisplay: false,
-      location: `Auckland`,
+      location: 'Auckland',
       allLocations: [
-        `Auckland`,
-        `Wellington`,
-        `Christhurch`,
-        `Hamilton`,
-        `Tauranga`,
-        `Napier-Hastings`,
-        `Dunedin`,
-        `Rotorua`
+        'Auckland',
+        'Wellington',
+        'Christhurch',
+        'Hamilton',
+        'Tauranga',
+        'Napier-Hastings',
+        'Dunedin',
+        'Rotorua'
       ]
     };
     this.mouseOverHandler = this.mouseOverHandler.bind(this);
@@ -37,14 +37,14 @@ export default class LocationBox extends React.Component {
 
   mouseOverHandler() {
     this.setState({
-      locationContainerBgColor: `#89a`,
+      locationContainerBgColor: '#89a',
       dropdownContainerDisplay: true
     });
   }
 
   mouseOutHandler() {
     this.setState({
-      locationContainerBgColor: ``,
+      locationContainerBgColor: '',
       dropdownContainerDisplay: false
     });
   }
@@ -52,33 +52,33 @@ export default class LocationBox extends React.Component {
   render() {
     const styles = {
       container: {
-        display: `inline-block`,
-        border: `thick solid #000000`
+        display: 'inline-block',
+        border: 'thick solid #000000'
       },
       currentLocationContainer: {
-        lineHeight: `20px`,
+        lineHeight: '20px',
         backgroundColor: this.state.locationContainerBgColor,
-        border: `thick solid #000000`
+        border: 'thick solid #000000'
       },
       locationIcon: {
-        display: `inline-block`,
-        width: `15px`,
-        height: `15px`,
-        verticalAlign: `middle`,
-        marginLeft: `3px`
+        display: 'inline-block',
+        width: '15px',
+        height: '15px',
+        verticalAlign: 'middle',
+        marginLeft: '3px'
       },
       location: {
-        display: `inline-block`,
-        verticalAlign: `middle`,
-        marginRight: `3px`,
-        paddingLeft: `3px`,
-        color: `#fff`,
-        fontSize: `13px`
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        marginRight: '3px',
+        paddingLeft: '3px',
+        color: '#fff',
+        fontSize: '13px'
       },
       locationSelectionIcon: {
-        width: `15px`,
-        height: `15px`,
-        verticalAlign: `middle`
+        width: '15px',
+        height: '15px',
+        verticalAlign: 'middle'
       },
       dropdownContainer: {
         display: this.state.dropdownContainerDisplay ? 'block' : 'none'

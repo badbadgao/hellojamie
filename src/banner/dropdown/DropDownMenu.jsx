@@ -15,13 +15,13 @@ const DropDownMenu = props => {
   });
 
   const style = {
-    paddingTop: `4px`,
-    backgroundColor: `#ffffff`,
-    borderBottom: `1px solid #ddd`,
-    borderLeft: `1px solid #ddd`,
+    paddingTop: '4px',
+    backgroundColor: '#ffffff',
+    borderBottom: '1px solid #ddd',
+    borderLeft: '1px solid #ddd',
     borderRight: props.scrolled ? 'none' : '1px solid #ddd',
-    position: `absolute`,
-    overflowY: props.scrolled ? `scroll` : 'none',
+    position: 'absolute',
+    overflowY: props.scrolled ? 'scroll' : 'none',
     display: props.dropDownMenuDisplayed ? 'block' : 'none'
   };
 

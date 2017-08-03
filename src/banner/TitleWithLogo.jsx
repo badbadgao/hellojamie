@@ -9,20 +9,20 @@ export default class TitleWithLogo extends React.Component {
   render() {
     const styles = {
       container: {
-        display: `inline-block`,
-        paddingLeft: `20px`
+        display: 'inline-block',
+        paddingLeft: '20px'
       },
       img: {
-        verticalAlign: `middle`,
-        display: `inline-block`,
-        textAlign: `left`
+        verticalAlign: 'middle',
+        display: 'inline-block',
+        textAlign: 'left'
       },
       text: {
-        color: `#fff`,
-        fontSize: `15px`,
-        display: `inline-block`,
-        verticalAlign: `middle`,
-        paddingRight: `30px`
+        color: '#fff',
+        fontSize: '15px',
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        paddingRight: '30px'
       }
     };
     return (

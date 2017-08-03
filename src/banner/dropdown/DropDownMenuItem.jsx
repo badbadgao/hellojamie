@@ -4,7 +4,7 @@ export default class DropDownMenuItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedColor: ``
+      selectedColor: ''
     };
     this.itemMouseOverHandler = this.itemMouseOverHandler.bind(this);
     this.itemMouseOutHandler = this.itemMouseOutHandler.bind(this);
@@ -12,30 +12,30 @@ export default class DropDownMenuItem extends React.Component {
 
   itemMouseOverHandler() {
     this.setState({
-      selectedColor: `#ffffff`
+      selectedColor: '#ffffff'
     });
   }
 
   itemMouseOutHandler() {
     this.setState({
-      selectedColor: `#f5f5f5`
+      selectedColor: '#f5f5f5'
     });
   }
 
   render() {
     const styles = {
       container: {
-        cursor: `pointer`,
-        height: `25px`,
+        cursor: 'pointer',
+        height: '25px',
         backgroundColor: this.state.selectedColor
       },
       itemContent: {
-        fontSize: `12px`,
-        color: `#444`,
-        paddingLeft: `4px`,
+        fontSize: '12px',
+        color: '#444',
+        paddingLeft: '4px',
         paddingRight: '10px',
-        lineHeight: `25px`,
-        verticalAlign: `middle`
+        lineHeight: '25px',
+        verticalAlign: 'middle'
       }
     };
     return (

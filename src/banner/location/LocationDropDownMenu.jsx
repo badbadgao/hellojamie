@@ -15,14 +15,14 @@ const LocationDropDownMenu = props => {
     );
   });
   const style = {
-    paddingTop: `4px`,
-    width: `200px`,
-    height: `150px`,
-    backgroundColor: `#ffffff`,
-    borderBottom: `1px solid #ddd`,
-    borderLeft: `1px solid #ddd`,
-    position: `absolute`,
-    overflowY: `scroll`
+    paddingTop: '4px',
+    width: '200px',
+    height: '150px',
+    backgroundColor: '#ffffff',
+    borderBottom: '1px solid #ddd',
+    borderLeft: '1px solid #ddd',
+    position: 'absolute',
+    overflowY: 'scroll'
   };
 
   return (

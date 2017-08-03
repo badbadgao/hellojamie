@@ -5,19 +5,19 @@ import cartIcon from '../../resource/cart.png';
 
 const AccountPanel = props => {
   const onMouseOverHandler = () => {
-    alert(`item1`);
+    alert('item1');
   };
   const onMouseOutHandler = () => {
-    alert(`item2`);
+    alert('item2');
   };
   const onTextClick = () => {};
   const styles = {
     container: {
-      position: `absolute`,
+      position: 'absolute',
       top: 0,
-      right: `50px`,
-      lineHeight: `36px`,
-      display: `inline-block`
+      right: '50px',
+      lineHeight: '36px',
+      display: 'inline-block'
     },
     myJMContainer: {
       paddingRight: '15px',
@@ -29,7 +29,7 @@ const AccountPanel = props => {
     }
   };
   const itemList = ['SIGNIN', 'SINGUP', 'CONTACT'];
-  const myJDlist = [`My orders`, `My vochers`, 'My history'];
+  const myJDlist = ['My orders', 'My vochers', 'My history'];
   const myCart = ['Iphone7s $1000', 'Huawei P7 899$'];
   const linkText = itemList.map(item => {
     const mouseOverHandler = onMouseOverHandler.bind(this, item);

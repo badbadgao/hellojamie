@@ -13,10 +13,10 @@ export default class DropDownPanel extends React.Component {
 
     this.state = {
       displayItemStyle: {
-        bgColor: ``,
-        leftBorder: `1px solid #f5f5f5`,
-        rightBorder: `1px solid #f5f5f5`,
-        contentTextColor: `#444`
+        bgColor: '',
+        leftBorder: '1px solid #f5f5f5',
+        rightBorder: '1px solid #f5f5f5',
+        contentTextColor: '#444'
       },
       displayContent: this.props.content,
       items: this.props.items
@@ -25,10 +25,10 @@ export default class DropDownPanel extends React.Component {
   onDropDownItemClickHandler(item) {
     this.setState({
       displayItemStyle: {
-        bgColor: ``,
-        leftBorder: `1px solid #f5f5f5`,
-        rightBorder: `1px solid #f5f5f5`,
-        contentTextColor: `#444`
+        bgColor: '',
+        leftBorder: '1px solid #f5f5f5',
+        rightBorder: '1px solid #f5f5f5',
+        contentTextColor: '#444'
       },
       displayContent: this.props.type === 'select' ? item : this.props.content,
       dropDownMenuDisplayed: false
@@ -38,10 +38,10 @@ export default class DropDownPanel extends React.Component {
   mouseOverHandler() {
     this.setState({
       displayItemStyle: {
-        bgColor: `#ffffff`,
-        leftBorder: `1px solid #ddd`,
-        rightBorder: `1px solid #ddd`,
-        contentTextColor: `#e08a1e`
+        bgColor: '#ffffff',
+        leftBorder: '1px solid #ddd',
+        rightBorder: '1px solid #ddd',
+        contentTextColor: '#e08a1e'
       },
       dropDownMenuDisplayed: true
     });
@@ -50,10 +50,10 @@ export default class DropDownPanel extends React.Component {
   mouseOutHandler() {
     this.setState({
       displayItemStyle: {
-        bgColor: ``,
-        leftBorder: `1px solid #f5f5f5`,
-        rightBorder: `1px solid #f5f5f5`,
-        contentTextColor: `#444`
+        bgColor: '',
+        leftBorder: '1px solid #f5f5f5',
+        rightBorder: '1px solid #f5f5f5',
+        contentTextColor: '#444'
       },
       dropDownMenuDisplayed: false
     });
@@ -62,7 +62,7 @@ export default class DropDownPanel extends React.Component {
   render() {
     const styles = {
       container: {
-        display: `inline-block`
+        display: 'inline-block'
       }
     };
     return (

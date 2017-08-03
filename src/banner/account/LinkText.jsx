@@ -5,7 +5,7 @@ export default class LinkText extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      textColor: `#444`
+      textColor: '#444'
     };
     this.onMouseOverHandler = this.onMouserOverHandler.bind(this);
     this.onMouseOutHandler = this.onMouseOutHandler.bind(this);
@@ -13,32 +13,32 @@ export default class LinkText extends React.Component {
 
   onMouserOverHandler() {
     this.setState({
-      textColor: `#e08a1e`
+      textColor: '#e08a1e'
     });
   }
 
   onMouseOutHandler() {
     this.setState({
-      textColor: `#444`
+      textColor: '#444'
     });
   }
   render() {
     const styles = {
       container: {
-        textAlign: `left`,
-        display: `inline-block`
+        textAlign: 'left',
+        display: 'inline-block'
       },
       content: {
-        margin: `0 4px`,
-        cursor: `pointer`,
-        verticalAlign: `middle`,
-        fontSize: `12px`,
+        margin: '0 4px',
+        cursor: 'pointer',
+        verticalAlign: 'middle',
+        fontSize: '12px',
         color: this.state.textColor
       },
       divide: {
-        marginBottom: `3px`,
-        fontSize: `13px`,
-        color: `#444`
+        marginBottom: '3px',
+        fontSize: '13px',
+        color: '#444'
       }
     };
 

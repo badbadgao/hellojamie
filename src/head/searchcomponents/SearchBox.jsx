@@ -39,7 +39,6 @@ export default class SearchBox extends React.Component {
   render() {
     const styles = {
       container: {
-        position: 'relative',
         display: 'inline-block'
       },
       searchBoxContainer: {
@@ -60,7 +59,7 @@ export default class SearchBox extends React.Component {
         verticalAlign: 'middle',
         paddingLeft: '10px',
         paddingRight: '10px',
-        cursor: `pointer`,
+        cursor: 'pointer',
         color: '#fff',
         fontSize: '15px'
       }

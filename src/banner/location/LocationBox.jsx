@@ -7,20 +7,20 @@ export default class LocationBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      locationContainerBgColor: ``,
+      locationContainerBgColor: '',
       dropdownContainerDisplay: false,
-      leftBorder: `none`,
-      rightBorder: `none`,
-      location: `Auckland`,
+      leftBorder: 'none',
+      rightBorder: 'none',
+      location: 'Auckland',
       allLocations: [
-        `Auckland`,
-        `Wellington`,
-        `Christhurch`,
-        `Hamilton`,
-        `Tauranga`,
-        `Napier-Hastings`,
-        `Dunedin`,
-        `Rotorua`
+        'Auckland',
+        'Wellington',
+        'Christhurch',
+        'Hamilton',
+        'Tauranga',
+        'Napier-Hastings',
+        'Dunedin',
+        'Rotorua'
       ]
     };
     this.mouseOverHandler = this.mouseOverHandler.bind(this);
@@ -33,64 +33,64 @@ export default class LocationBox extends React.Component {
   onDropDownItemClickHandler(location) {
     this.setState({
       location: location,
-      locationContainerBgColor: ``,
+      locationContainerBgColor: '',
       dropdownContainerDisplay: false,
-      leftBorder: `none`,
-      rightBorder: `none`,
-      curretLocationColor: `#444`
+      leftBorder: 'none',
+      rightBorder: 'none',
+      curretLocationColor: '#444'
     });
   }
 
   mouseOverHandler() {
     this.setState({
-      locationContainerBgColor: `#ffffff`,
+      locationContainerBgColor: '#ffffff',
       dropdownContainerDisplay: true,
-      leftBorder: `1px solid #ddd`,
-      rightBorder: `1px solid #ddd`,
-      curretLocationColor: `#e08a1e`
+      leftBorder: '1px solid #ddd',
+      rightBorder: '1px solid #ddd',
+      curretLocationColor: '#e08a1e'
     });
   }
 
   mouseOutHandler() {
     this.setState({
-      locationContainerBgColor: ``,
+      locationContainerBgColor: '',
       dropdownContainerDisplay: false,
-      leftBorder: `none`,
-      rightBorder: `none`,
-      curretLocationColor: `#444`
+      leftBorder: 'none',
+      rightBorder: 'none',
+      curretLocationColor: '#444'
     });
   }
 
   render() {
     const styles = {
       container: {
-        display: `inline-block`
+        display: 'inline-block'
       },
       currentLocationContainer: {
-        lineHeight: `36px`,
+        lineHeight: '36px',
         backgroundColor: this.state.locationContainerBgColor,
         borderLeft: this.state.leftBorder,
         borderRight: this.state.rightBorder
       },
       locationIcon: {
-        display: `inline-block`,
-        width: `15px`,
-        height: `15px`,
-        verticalAlign: `middle`,
-        marginLeft: `3px`
+        display: 'inline-block',
+        width: '15px',
+        height: '15px',
+        verticalAlign: 'middle',
+        marginLeft: '3px'
       },
       location: {
-        display: `inline-block`,
-        verticalAlign: `middle`,
-        marginRight: `3px`,
-        paddingLeft: `3px`,
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        marginRight: '3px',
+        paddingLeft: '3px',
         color: this.state.curretLocationColor,
-        fontSize: `13px`
+        fontSize: '13px'
       },
       locationSelectionIcon: {
-        width: `15px`,
-        height: `15px`,
-        verticalAlign: `middle`
+        width: '15px',
+        height: '15px',
+        verticalAlign: 'middle'
       },
       dropdownContainer: {
         display: this.state.dropdownContainerDisplay ? 'block' : 'none'

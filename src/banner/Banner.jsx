@@ -33,27 +33,27 @@ export default class Banner extends React.Component {
   render() {
     const styles = {
       bannerContainer: {
-        backgroundColor: `#f5f5f5`,
-        height: `36px`,
-        width: `100%`,
-        textAlign: `left`,
-        borderBottom: `1px solid #ddd`
+        backgroundColor: '#f5f5f5',
+        height: '36px',
+        width: '100%',
+        textAlign: 'left',
+        borderBottom: '1px solid #ddd'
       },
       logoContainer: {
-        display: `inline-block`,
-        textAlign: `left`,
-        marginLeft: `30px`
+        display: 'inline-block',
+        textAlign: 'left',
+        marginLeft: '30px'
       },
       flexBannerContainer: {
-        display: `flex`,
-        justifyContent: `flex-start`,
-        backgroundColor: `#789`,
-        height: `36px`,
-        width: `100%`
+        display: 'flex',
+        justifyContent: 'flex-start',
+        backgroundColor: '#789',
+        height: '36px',
+        width: '100%'
       },
       flexSignContainer: {
-        display: `flex`,
-        alignItems: `center`
+        display: 'flex',
+        alignItems: 'center'
       },
       locationContainer: { paddingLeft: '200px' },
       accountPanel: { paddingRight: '200px' }

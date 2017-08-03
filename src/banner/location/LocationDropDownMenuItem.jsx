@@ -4,7 +4,7 @@ export default class LocationDropDownMenuItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedColor: ``
+      selectedColor: ''
     };
     this.itemMouseOverHandler = this.itemMouseOverHandler.bind(this);
     this.itemMouseOutHandler = this.itemMouseOutHandler.bind(this);
@@ -12,29 +12,29 @@ export default class LocationDropDownMenuItem extends React.Component {
 
   itemMouseOverHandler() {
     this.setState({
-      selectedColor: `#ffffff`
+      selectedColor: '#ffffff'
     });
   }
 
   itemMouseOutHandler() {
     this.setState({
-      selectedColor: `#f5f5f5`
+      selectedColor: '#f5f5f5'
     });
   }
 
   render() {
     const styles = {
       container: {
-        cursor: `pointer`,
-        height: `25px`,
+        cursor: 'pointer',
+        height: '25px',
         backgroundColor: this.state.selectedColor
       },
       itemContent: {
-        fontSize: `12px`,
-        color: `#444`,
-        paddingLeft: `10px`,
-        lineHeight: `25px`,
-        verticalAlign: `middle`
+        fontSize: '12px',
+        color: '#444',
+        paddingLeft: '10px',
+        lineHeight: '25px',
+        verticalAlign: 'middle'
       }
     };
     return (

@@ -24,6 +24,7 @@ const SearchDropDownMenu = props => {
       textAlign: 'start',
       marginLeft: '2px',
       marginTop: '2px',
+      position: 'absolute',
       display: props.dropDownDisplayed ? 'block' : 'none'
     }
   };
