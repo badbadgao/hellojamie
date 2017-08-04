@@ -13,8 +13,6 @@ const AccountPanel = props => {
   const onTextClick = () => {};
   const styles = {
     container: {
-      position: 'absolute',
-      top: 0,
       right: '50px',
       lineHeight: '36px',
       display: 'inline-block'

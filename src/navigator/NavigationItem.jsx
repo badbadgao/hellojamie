@@ -1,6 +1,7 @@
 import React from 'react';
 import RecommendItem from './RecommendItem.jsx';
 import chevronRightIcon from '../resource/chevron-right.png';
+import '../css/App.css';
 
 const NavigationItem = props => {
   const recommendItemPanel = props.recommendProducts.map(recommendProduct => {
@@ -43,7 +44,9 @@ const NavigationItem = props => {
   return (
     <div style={styles.container}>
       <div style={styles.category}>
-        {props.categoryName}
+        <div className="TextHoverStyle">
+          {props.categoryName}
+        </div>
       </div>
       {recommendItemPanel}
       <div style={styles.imgContainer}>

@@ -36,7 +36,6 @@ export default class Banner extends React.Component {
         backgroundColor: '#f5f5f5',
         height: '36px',
         width: '100%',
-        textAlign: 'left',
         borderBottom: '1px solid #ddd'
       },
       logoContainer: {
@@ -55,8 +54,15 @@ export default class Banner extends React.Component {
         display: 'flex',
         alignItems: 'center'
       },
-      locationContainer: { paddingLeft: '200px' },
-      accountPanel: { paddingRight: '200px' }
+      locationContainer: {
+        paddingLeft: '200px',
+        display: 'inline-block'
+      },
+      accountPanel: {
+        paddingRight: '100px',
+        display: 'inline-block',
+        float: 'right'
+      }
     };
     return (
       <div style={styles.bannerContainer}>
@@ -76,8 +82,3 @@ export default class Banner extends React.Component {
     );
   }
 }
-
-//
-// <div style={styles.logoContainer}>
-//   <TitleWithLogo titleLogo={logo} title="Hello Jamie" />
-// </div>

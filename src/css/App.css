@@ -61,6 +61,7 @@
 
 .TextHoverStyle:hover {
   color: #e08a1e;
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {

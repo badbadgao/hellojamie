@@ -16,21 +16,21 @@ export default class NavigatorPanel extends React.Component {
         {
           categoryName: 'Mobiles',
           recommendProducts: [
-            { name: 'Iphone6S', isStrongRecommended: true },
+            { name: 'Iphone6S', isStrongRecommended: false },
             { name: 'Huawei', isStrongRecommended: false }
           ]
         },
         {
           categoryName: 'Travel',
           recommendProducts: [
-            { name: 'Hotel', isStrongRecommended: true },
-            { name: 'Flight', isStrongRecommended: false }
+            { name: 'Hotel', isStrongRecommended: false },
+            { name: 'Flight', isStrongRecommended: true }
           ]
         },
         {
-          categoryName: 'Cloth',
+          categoryName: 'Clothes',
           recommendProducts: [
-            { name: 'Kids', isStrongRecommended: true },
+            { name: 'Kids', isStrongRecommended: false },
             { name: 'Sports', isStrongRecommended: false }
           ]
         },
@@ -44,7 +44,7 @@ export default class NavigatorPanel extends React.Component {
         {
           categoryName: 'Health',
           recommendProducts: [
-            { name: 'Hot Pot', isStrongRecommended: true },
+            { name: 'Hot Pot', isStrongRecommended: false },
             { name: 'Sushi', isStrongRecommended: false }
           ]
         },
@@ -58,7 +58,7 @@ export default class NavigatorPanel extends React.Component {
         {
           categoryName: 'Pet',
           recommendProducts: [
-            { name: 'Dog', isStrongRecommended: true },
+            { name: 'Dog', isStrongRecommended: false },
             { name: 'Cat', isStrongRecommended: false }
           ]
         },
@@ -67,6 +67,13 @@ export default class NavigatorPanel extends React.Component {
           recommendProducts: [
             { name: 'ELTES', isStrongRecommended: true },
             { name: 'TOELF', isStrongRecommended: false }
+          ]
+        },
+        {
+          categoryName: 'Shopping',
+          recommendProducts: [
+            { name: 'Sports', isStrongRecommended: false },
+            { name: 'Fruites', isStrongRecommended: false }
           ]
         }
       ]

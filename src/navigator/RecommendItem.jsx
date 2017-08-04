@@ -9,8 +9,7 @@ const RecommendItem = props => {
     paddingRight: '5px',
     display: 'inline-block',
     lineHeight: '40px',
-    hoverBackground: '#e08a1e',
-    cursor: 'pointer'
+    hoverBackground: '#e08a1e'
   };
 
   return (
