@@ -29,15 +29,19 @@ export default class GalleryImg extends React.Component {
       closeIcon: {
         position: 'absolute',
         top: '4px',
-        right: '4px',
-        title: 'Close'
+        right: '4px'
       }
     };
     return (
       <div style={styles.galleryContainer}>
-        <img style={styles.galleryImg} src={huaweiGalleryIcon} />
+        <img
+          style={styles.galleryImg}
+          alt="Gallery Ads"
+          src={huaweiGalleryIcon}
+        />
         <img
           style={styles.closeIcon}
+          alt="Close Gallery"
           title="Close"
           src={closeIcon}
           onClick={this.closeHandler}
