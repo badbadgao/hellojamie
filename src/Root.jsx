@@ -7,8 +7,8 @@ const Root = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={App} />
-        <Route path="/contact" component={Banner} />
+        <Route path="/contact" component={App} />
+        <Route exact path="/" component={App} />
       </Switch>
     </Router>
   );

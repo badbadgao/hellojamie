@@ -1,59 +1,49 @@
 import React from 'react';
 import '../../css/App.css';
+import { Link } from 'react-router-dom';
 
-export default class LinkText extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      textColor: '#444'
-    };
-    this.onMouseOverHandler = this.onMouserOverHandler.bind(this);
-    this.onMouseOutHandler = this.onMouseOutHandler.bind(this);
-  }
+const LinkText = props => {
+  const getRedirctPath = () => {
+    return props.content == 'CONTACT' ? '/contact' : '/';
+  };
 
-  onMouserOverHandler() {
-    this.setState({
-      textColor: '#e08a1e'
-    });
-  }
+  const styles = {
+    container: {
+      display: 'inline-block'
+    },
+    content: {
+      margin: '0 6px',
+      verticalAlign: 'middle',
+      fontSize: '12px',
+      color: '#444',
+      display: 'inline-block'
+    },
+    divide: {
+      marginBottom: '3px',
+      fontSize: '13px',
+      color: '#444',
+      display: 'inline-block',
+      verticalAlign: 'middle'
+    },
+    link: {
+      outline: 'none',
+      textDecoration: 'none',
+      color: '#444'
+    }
+  };
 
-  onMouseOutHandler() {
-    this.setState({
-      textColor: '#444'
-    });
-  }
-  render() {
-    const styles = {
-      container: {
-        textAlign: 'left',
-        display: 'inline-block'
-      },
-      content: {
-        margin: '0 4px',
-        cursor: 'pointer',
-        verticalAlign: 'middle',
-        fontSize: '12px',
-        color: this.state.textColor
-      },
-      divide: {
-        marginBottom: '3px',
-        fontSize: '13px',
-        color: '#444'
-      }
-    };
-
-    return (
-      <div style={styles.container}>
-        <text
-          style={styles.content}
-          onClick={this.props.onClick}
-          onMouseOver={this.onMouseOverHandler}
-          onMouseOut={this.onMouseOutHandler}
-        >
-          {this.props.content}
-        </text>
-        <text style={styles.divide}>|</text>
+  return (
+    <div style={styles.container}>
+      <div style={styles.content} onClick={props.onClick}>
+        <Link style={styles.link} to={getRedirctPath()}>
+          <div className="TextHoverStyle">
+            {props.content}
+          </div>
+        </Link>
       </div>
-    );
-  }
-}
+      <div style={styles.divide}>|</div>
+    </div>
+  );
+};
+
+export default LinkText;

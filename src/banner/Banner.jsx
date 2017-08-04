@@ -41,7 +41,7 @@ export default class Banner extends React.Component {
       logoContainer: {
         display: 'inline-block',
         textAlign: 'left',
-        marginLeft: '30px'
+        paddingLeft: '130px'
       },
       flexBannerContainer: {
         display: 'flex',

@@ -4,12 +4,6 @@ import DropDownPanel from '../dropdown/DropDownPanel.jsx';
 import cartIcon from '../../resource/cart.png';
 
 const AccountPanel = props => {
-  const onMouseOverHandler = () => {
-    alert('item1');
-  };
-  const onMouseOutHandler = () => {
-    alert('item2');
-  };
   const onTextClick = () => {};
   const styles = {
     container: {
@@ -30,12 +24,10 @@ const AccountPanel = props => {
   const myJDlist = ['My orders', 'My vochers', 'My history'];
   const myCart = ['Iphone7s $1000', 'Huawei P7 899$'];
   const linkText = itemList.map(item => {
-    const mouseOverHandler = onMouseOverHandler.bind(this, item);
     const textClickHandler = onTextClick.bind(this, item);
     return (
       <LinkText
         key={item.toString()}
-        onMouseOver={mouseOverHandler}
         onClick={textClickHandler}
         content={item}
       />

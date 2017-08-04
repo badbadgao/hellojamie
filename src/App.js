@@ -13,7 +13,6 @@ class App extends Component {
         <Banner />
         <HeadBanner />
         <NavigatorPanel />
-        <p className="App-intro" />
       </div>
     );
   }
