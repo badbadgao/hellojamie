@@ -3,6 +3,53 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+
+###############################################
+###             Project README              ###
+###                                         ###
+###############################################
+
+## Improve performance
+
+1) Avoid Reconciliation
+use shouldComponentUpdate(nextProps, nextState) to determin whether to update the UI
+
+2) The Power Of Not Mutating Data
+Use "object spread properties" to return new object.
+e.g.
+
+handleClick() {
+  this.setState(prevState => ({
+    words: [...prevState.words, 'marklar'],
+  }));
+};
+
+usr Object.assign
+function updateColorMap(colormap) {
+  return Object.assign({}, colormap, {right: 'blue'});
+}
+
+Use === to check the reference
+
+## Context
+
+- Introduction
+Doc Link: https://facebook.github.io/react/docs/context.html
+It is easy to track the flow of data throungh your React Component by passing props. In some case, we need to pass data without having to pass down manually the props, instead we use "context";
+
+- Why Not To Use Context
+1) It is a experimental API and it is likely to break in the future, so DO NOT use it if not necessary. Use Redux or MobX instead.
+Redux documentation: http://redux.js.org/docs/introduction/index.html
+
+2) How to solve the problem with Context?
+https://medium.com/@mweststrate/how-to-safely-use-react-context-b7e343eff076
+
+- How to use context
+By adding childContextTypes and getChildContext to parent compoent (the context provider), React passes the information down automatically and any component in the subtree (in this case, Button) can access it by defining contextTypes.
+
+If contextTypes is not defined, then context will be an empty object.
+
+
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
@@ -1760,7 +1807,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
