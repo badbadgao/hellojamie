@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const LinkText = props => {
   const getRedirctPath = () => {
-    return props.content == 'CONTACT' ? '/contact' : '/';
+    return props.content === 'CONTACT' ? '/contact' : '/';
   };
 
   const styles = {

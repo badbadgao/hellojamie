@@ -2,8 +2,10 @@ import React from 'react';
 import LinkText from './LinkText.jsx';
 import DropDownPanel from '../dropdown/DropDownPanel.jsx';
 import cartIcon from '../../resource/cart.png';
+import getAccountLinks from '../../reducers';
+import { connect } from 'react-redux';
 
-const AccountPanel = props => {
+const AccountPanel = accountLinks => {
   const onTextClick = () => {};
   const styles = {
     container: {
@@ -23,13 +25,14 @@ const AccountPanel = props => {
   const itemList = ['SIGNIN', 'SINGUP', 'CONTACT'];
   const myJDlist = ['My orders', 'My vochers', 'My history'];
   const myCart = ['Iphone7s $1000', 'Huawei P7 899$'];
-  const linkText = itemList.map(item => {
-    const textClickHandler = onTextClick.bind(this, item);
+
+  const linkText = accountLinks.map(link => {
+    const textClickHandler = onTextClick.bind(this, link);
     return (
       <LinkText
-        key={item.toString()}
+        key={link.toString()}
         onClick={textClickHandler}
-        content={item}
+        content={link}
       />
     );
   });
@@ -52,4 +55,10 @@ const AccountPanel = props => {
   );
 };
 
-export default AccountPanel;
+const mapStateToProps = state => {
+  return {
+    accountLinks: getAccountLinks(state.accountLinks)
+  };
+};
+
+export default connect(mapStateToProps)(AccountPanel);

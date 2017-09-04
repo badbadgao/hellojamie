@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import SearchDropDownItem from './SearchDropDownItem.jsx';
 import { Card } from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 const SearchDropDownMenu = props => {
   const dropDownPanel = props.relatedProductList.map(product => {
@@ -36,6 +35,12 @@ const SearchDropDownMenu = props => {
       </Card>
     </MuiThemeProvider>
   );
+};
+
+SearchDropDownMenu.PropTypes = {
+  relatedProductList: PropTypes.array.isRequired,
+  onItemClick: PropTypes.func.isRequired,
+  dropDownDisplayed: PropTypes.bool.isRequired
 };
 
 export default SearchDropDownMenu;
