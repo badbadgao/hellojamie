@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import './css/index.css';
 import Root from './Root.jsx';
 import registerServiceWorker from './registerServiceWorker';
@@ -11,9 +11,9 @@ import reducer from './reducers';
 
 const store = createStore(reducer);
 
-store.dispatch(getAccoutLinkTexts());
+store.dispatch(getAccoutLinkTexts);
 
-ReactDOM.render(
+render(
   <Provider store={store}>
     <Root />
   </Provider>,
