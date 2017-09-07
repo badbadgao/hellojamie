@@ -1,17 +1,13 @@
 import MyServiceImpl from '../api/myServiceImpl';
-
-const ADD_TO_ACOUNT_LINKS = 'ADD_TO_ACOUNT_LINKS';
+import { ADD_ACCOUNT_LINK } from '../constant/actionTypes';
 
 const getAccoutLinks = () => dispatch => {
-  console.log('getAccoutLinks 0000');
-  MyServiceImpl.getAccountLinks(accountLinks => {
-    console.log('getAccoutLinks 1111');
-    dispatch(addToLinks(accountLinks));
-  });
+  MyServiceImpl.getLinks(links => dispatch(addToLink(links)));
 };
 
-const addToLinks = links => ({
-  type: 'ADD_TO_ACOUNT_LINKS',
+const addToLink = links => ({
+  type: ADD_ACCOUNT_LINK,
   links
 });
+
 export default getAccoutLinks;

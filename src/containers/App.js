@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './css/App.css';
+import '../css/App.css';
+
 import Banner from './banner/Banner.jsx';
 import HeadBanner from './head/HeadBanner.jsx';
 import NavigatorPanel from './navigator/NavigatorPanel.jsx';
-import GalleryAdsPanel from './galleryads/GalleryAdsPanel.jsx';
+import GalleryAdsPanel from './GalleryAdsPanel';
 
 class App extends Component {
   render() {

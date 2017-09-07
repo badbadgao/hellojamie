@@ -1,7 +1,7 @@
 import React from 'react';
 import RecommendItem from './RecommendItem.jsx';
-import chevronRightIcon from '../resource/chevron-right.png';
-import '../css/App.css';
+import chevronRightIcon from '../../resource/chevron-right.png';
+import '../../css/App.css';
 
 const NavigationItem = props => {
   const recommendItemPanel = props.recommendProducts.map(recommendProduct => {

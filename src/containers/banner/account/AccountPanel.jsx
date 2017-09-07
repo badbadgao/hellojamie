@@ -1,11 +1,13 @@
 import React from 'react';
-import LinkText from './LinkText.jsx';
-import DropDownPanel from '../dropdown/DropDownPanel.jsx';
-import cartIcon from '../../resource/cart.png';
-import getAccountLinks from '../../reducers';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import MyServiceImpl from '../../api/myServiceImpl';
+
+import LinkText from '../../../components/LinkText';
+import DropDownPanel from '../../../components/dropdown/DropDownPanel.jsx';
+import cartIcon from '../../../resource/cart.png';
+
+import MyServiceImpl from '../../../api/myServiceImpl';
+import { getVisibleLinks } from '../../../reducers';
 
 const AccountPanel = ({ links }) => {
   const onTextClick = () => {};
@@ -72,7 +74,7 @@ AccountPanel.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    links: state.links
+    links: getVisibleLinks(state)
   };
 };
 

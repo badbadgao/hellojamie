@@ -1,20 +1,14 @@
-import { ADD_TO_ACOUNT_LINKS } from '../actions';
+import { ADD_ACCOUNT_LINK } from '../constant/actionTypes';
+import { combineReducers } from 'redux';
 
-const getAccountLinks = (state = {}, action) => {
+const links = (state = {}, action) => {
   console.log('test actions:' + action);
   switch (action) {
-    case 'ADD_TO_ACOUNT_LINKS':
+    case 'ADD_TO_ACOUNT_LINKS1':
       return {
         ...state,
         ...action.links
       };
-    case 'GET_ALL_LINKS':
-      return [
-        ...state,
-        { id: 0, content: 'SIGNIN' },
-        { id: 1, content: 'SINGUP' },
-        { id: 2, conent: 'CONTACT' }
-      ];
     default:
       return state;
   }
@@ -23,7 +17,7 @@ const getAccountLinks = (state = {}, action) => {
 const byId = (state = {}, action) => {
   console.log('byid:' + action);
   switch (action.type) {
-    case 'ADD_TO_ACOUNT_LINKS':
+    case ADD_ACCOUNT_LINK:
       return {
         ...state,
         ...action.links.reduce((obj, link) => {
@@ -32,15 +26,28 @@ const byId = (state = {}, action) => {
         }, {})
       };
     default:
-      const { productId } = action;
-      if (productId) {
-        return {
-          ...state,
-          [productId]: products(state[productId], action)
-        };
-      }
       return state;
   }
 };
 
-export default getAccountLinks;
+const visibleIds = (state = [], action) => {
+  console.log('visibleIds ' + action);
+  switch (action.type) {
+    case ADD_ACCOUNT_LINK:
+      return action.links.map(link => link.id);
+    default:
+      return state;
+  }
+};
+
+const getLink = (state, id) => state.byId[id];
+
+export const getProduct = (state, id) => state.byId[id];
+
+export const getVisibleLinks = state =>
+  state.visibleIds.map(id => getLink(state, id));
+
+export default combineReducers({
+  byId,
+  visibleIds
+});

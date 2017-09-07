@@ -1,6 +1,6 @@
 import React from 'react';
-import huaweiGalleryIcon from '../resource/galleryhuawei7.jpg';
-import closeIcon from '../resource/close.png';
+import huaweiGalleryIcon from '../../resource/galleryhuawei7.jpg';
+import closeIcon from '../../resource/close.png';
 
 export default class GalleryImg extends React.Component {
   constructor(props) {

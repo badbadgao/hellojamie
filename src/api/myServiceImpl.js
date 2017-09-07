@@ -1,7 +1,10 @@
+/**
+ * Mocking client-server processing
+ */
+import _links from './links.json';
+
+const TIMEOUT = 100;
+
 export default {
-  getAccountLinks: () => [
-    { id: 1, content: 'SINGUP' },
-    { id: 2, content: 'SIGNIN' },
-    { id: 3, content: 'HELP' }
-  ]
+  getLinks: (cb, timeout) => setTimeout(() => cb(_links), timeout || TIMEOUT)
 };

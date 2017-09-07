@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './css/index.css';
-import Root from './Root.jsx';
+import Root from './containers/Root.jsx';
 import registerServiceWorker from './registerServiceWorker';
 
 import { createLogger } from 'redux-logger';

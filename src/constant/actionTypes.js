@@ -1,0 +1,1 @@
+export const ADD_ACCOUNT_LINK = 'ADD_ACCOUNT_LINK';

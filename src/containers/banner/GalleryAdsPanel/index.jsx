@@ -1,5 +1,5 @@
 import React from 'react';
-import GalleryImg from './GalleryImg.jsx';
+import GalleryImg from '../../../components/GalleryImg';
 
 const GalleryAdsPanel = props => {
   return <GalleryImg />;

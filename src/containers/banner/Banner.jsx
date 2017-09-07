@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from '../resource/logo.svg';
-import profileIcon from '../resource/account-circle.png';
-import TitleWithLogo from './TitleWithLogo.jsx';
+
+import TitleWithLogo from '../../components/TitleWithLogo';
 import AccountPanel from './account/AccountPanel.jsx';
-import DropDownPanel from './dropdown/DropDownPanel.jsx';
-import locationGreyIcon from '../resource/location-grey.png';
-import chevronDownIcon from '../resource/chevron-down.png';
+import DropDownPanel from '../../components/dropdown/DropDownPanel.jsx';
+
+import logo from '../../resource/logo.svg';
+import profileIcon from '../../resource/account-circle.png';
+import locationGreyIcon from '../../resource/location-grey.png';
+import chevronDownIcon from '../../resource/chevron-down.png';
 
 export default class Banner extends React.Component {
   constructor(props) {
