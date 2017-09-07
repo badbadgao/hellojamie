@@ -8,6 +8,7 @@ const NavigationItem = props => {
     return (
       <RecommendItem
         isStrongRecommended={recommendProduct.isStrongRecommended}
+        key={recommendProduct.name}
         name={recommendProduct.name}
       />
     );

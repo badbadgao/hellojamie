@@ -95,6 +95,7 @@ export default class NavigatorPanel extends React.Component {
       return (
         <NavigationItem
           categoryName={item.categoryName}
+          key={item.categoryName}
           recommendProducts={item.recommendProducts}
         />
       );

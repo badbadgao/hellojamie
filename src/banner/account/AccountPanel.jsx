@@ -5,6 +5,7 @@ import cartIcon from '../../resource/cart.png';
 import getAccountLinks from '../../reducers';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import MyServiceImpl from '../../api/myServiceImpl';
 
 const AccountPanel = ({ links }) => {
   const onTextClick = () => {};
@@ -71,7 +72,7 @@ AccountPanel.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    links: getAccountLinks()
+    links: state.links
   };
 };
 
