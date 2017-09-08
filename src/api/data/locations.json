@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "Auckland" },
+  { "id": 2, "name": "Wellington" },
+  { "id": 3, "name": "Christhurch" },
+  { "id": 4, "name": "Tauranga" },
+  { "id": 5, "name": "Hamilton" },
+  { "id": 6, "name": "Napier-Hastings" },
+  { "id": 7, "name": "Dunedin" },
+  { "id": 8, "name": "Rotorua" }
+]

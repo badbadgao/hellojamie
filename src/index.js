@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 
-import getAccoutLinks from './actions';
+import { getAccoutLinks, getAllLocations } from './actions';
 import reducer from './reducers';
 
 const middleware = [thunk];
@@ -20,6 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
 const store = createStore(reducer, applyMiddleware(...middleware));
 
 store.dispatch(getAccoutLinks());
+store.dispatch(getAllLocations());
 
 render(
   <Provider store={store}>

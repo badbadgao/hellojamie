@@ -7,7 +7,7 @@ import DropDownPanel from '../../../components/dropdown/DropDownPanel.jsx';
 import cartIcon from '../../../resource/cart.png';
 
 import MyServiceImpl from '../../../api/myServiceImpl';
-import { getVisibleLinks } from '../../../reducers';
+import { getVisibleLinks } from '../../../reducers/accountlinks';
 
 const AccountPanel = ({ links }) => {
   const onTextClick = () => {};
@@ -74,7 +74,7 @@ AccountPanel.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    links: getVisibleLinks(state)
+    links: getVisibleLinks(state.accountlinks)
   };
 };
 
