@@ -46,7 +46,7 @@ export default class DropDownMenuItem extends React.Component {
           onMouseOver={this.itemMouseOutHandler}
           onClick={this.props.onItemClick}
         >
-          {this.props.content}
+          {this.props.item.name}
         </div>
       </div>
     );

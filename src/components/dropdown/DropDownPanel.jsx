@@ -30,7 +30,8 @@ export default class DropDownPanel extends React.Component {
         rightBorder: '1px solid #f5f5f5',
         contentTextColor: '#444'
       },
-      displayContent: this.props.type === 'select' ? item : this.props.content,
+      displayContent:
+        this.props.type === 'select' ? item.name : this.props.content,
       dropDownMenuDisplayed: false
     });
   }

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import DropDownMenuItem from './DropDownMenuItem.jsx';
 
 const DropDownMenu = props => {
-  const content = props.items.map(item => {
+  const itemComponent = props.items.map(item => {
     const boundItemClick = props.onItemClick.bind(this, item);
     return (
       <DropDownMenuItem
-        key={item.toString()}
-        content={item}
+        key={item.id}
+        item={item}
         onItemClick={boundItemClick}
       />
     );
@@ -27,7 +27,7 @@ const DropDownMenu = props => {
 
   return (
     <div style={style}>
-      {content}
+      {itemComponent}
     </div>
   );
 };
