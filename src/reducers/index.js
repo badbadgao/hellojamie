@@ -1,19 +1,6 @@
 import { ADD_ACCOUNT_LINK } from '../constant/actionTypes';
 import { combineReducers } from 'redux';
 
-const links = (state = {}, action) => {
-  console.log('test actions:' + action);
-  switch (action) {
-    case 'ADD_TO_ACOUNT_LINKS1':
-      return {
-        ...state,
-        ...action.links
-      };
-    default:
-      return state;
-  }
-};
-
 const byId = (state = {}, action) => {
   console.log('byid:' + action);
   switch (action.type) {

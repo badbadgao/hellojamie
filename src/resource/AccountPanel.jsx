@@ -2,12 +2,10 @@ import React from 'react';
 import LinkText from './LinkText.jsx';
 
 const AccountPanel = props => {
-  const onMouseOverHandler = () => {
-    alert(`item1`);
-  };
-  const onMouseOutHandler = () => {
-    alert(`item2`);
-  };
+  const onMouseOverHandler = () => {};
+
+  const onMouseOutHandler = () => {};
+
   const onTextClick = () => {};
   const styles = {
     container: {
@@ -32,11 +30,7 @@ const AccountPanel = props => {
     );
   });
 
-  return (
-    <div style={styles.container}>
-      {linkText}
-    </div>
-  );
+  return <div style={styles.container}>{linkText}</div>;
 };
 
 export default AccountPanel;

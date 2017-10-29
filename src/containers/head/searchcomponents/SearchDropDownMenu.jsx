@@ -30,9 +30,7 @@ const SearchDropDownMenu = props => {
 
   return (
     <MuiThemeProvider>
-      <Card style={style.container} showExpandableButton={true}>
-        {dropDownPanel}
-      </Card>
+      <Card style={style.container}>{dropDownPanel}</Card>
     </MuiThemeProvider>
   );
 };

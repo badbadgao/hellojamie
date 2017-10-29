@@ -1,11 +1,8 @@
 import React from 'react';
 
-import TitleWithLogo from '../../components/TitleWithLogo';
 import AccountPanel from './account/AccountPanel.jsx';
 import DropDownPanel from '../../components/dropdown/DropDownPanel.jsx';
 
-import logo from '../../resource/logo.svg';
-import profileIcon from '../../resource/account-circle.png';
 import locationGreyIcon from '../../resource/location-grey.png';
 import chevronDownIcon from '../../resource/chevron-down.png';
 

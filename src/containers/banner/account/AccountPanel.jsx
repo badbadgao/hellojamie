@@ -6,7 +6,6 @@ import LinkText from '../../../components/LinkText';
 import DropDownPanel from '../../../components/dropdown/DropDownPanel.jsx';
 import cartIcon from '../../../resource/cart.png';
 
-import MyServiceImpl from '../../../api/myServiceImpl';
 import { getVisibleLinks } from '../../../reducers';
 
 const AccountPanel = ({ links }) => {
@@ -26,14 +25,8 @@ const AccountPanel = ({ links }) => {
       display: 'inline-block'
     }
   };
-  const itemList = ['SIGNIN', 'SINGUP', 'CONTACT'];
   const myJDlist = ['My orders', 'My vochers', 'My history'];
   const myCart = ['Iphone7s $1000', 'Huawei P7 899$'];
-  const testLinks = [
-    { id: 0, content: 'SIGNIN' },
-    { id: 1, content: 'SINGUP' },
-    { id: 2, conent: 'CONTACT' }
-  ];
   const linkText = links.map(link => {
     const textClickHandler = onTextClick.bind(this, link);
     return (
